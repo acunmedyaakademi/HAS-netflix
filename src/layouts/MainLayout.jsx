@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import App from "../App";
 import HomePage from "../assets/components/HomePage";
 import Sidebar from "../assets/components/Sidebar";
+import Films from "../assets/components/films";
 
 export default function MainLayout(){
     const [page,setPage] = useState(window.location.pathname);
@@ -22,6 +23,7 @@ export default function MainLayout(){
             <div>
                 <App>
                     {page === "/home" && <HomePage navigate={navigate}/>}
+                    {page === "/filmler" && <Films navigate={navigate}/>}
                 </App>
             </div>
         </div>

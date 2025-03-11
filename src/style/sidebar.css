@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #10141E;
+}
 .sidebar-container{
     background-color: #161D2F;
     display: flex;
@@ -25,4 +28,27 @@
 }
 .sidebar-icons i:hover{
     color: white;
+}
+.loading-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.loading{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid black;
+    border-top:5px solid white ;
+    animation: rotate 2s infinite;
+}
+@keyframes rotate{
+    100%{
+      rotate: 360deg;
+    }
+}
+.movie-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
