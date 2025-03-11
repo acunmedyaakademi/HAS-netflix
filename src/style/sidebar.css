@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sidebar-container{
+    background-color: #161D2F;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 16px;
+    .logo{
+        color: #FC4747;
+    }
+    .profile{
+        color: #5A698F;
+    }
+}
+.sidebar-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    i{
+        color: #5A698F;
+    }
+}
+.sidebar-icons i:hover{
+    color: white;
+}
