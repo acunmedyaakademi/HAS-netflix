@@ -61,6 +61,13 @@ body{
         color: white;
         margin-bottom: 24px;
     }
+    p{
+        color: white;
+        font-family: Outfit;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 100%;
+    }
 }
 .movies-container{
     display: grid;
@@ -126,4 +133,23 @@ body{
     color: white;
     margin-bottom: 24px;
     padding-inline: 16px;
+}
+.search-container{
+    padding: 26px 16px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    input{
+        border: none;
+        background-color: transparent;
+        font-family: Outfit;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        outline: none;
+        color: white;
+    }
+    i{
+        color: white;
+    }
 }

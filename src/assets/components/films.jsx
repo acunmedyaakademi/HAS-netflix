@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react"
 import Loading from "./Loading";
 import MoviesCard from "./MoviesCard";
+import SearchInput from "./SearchInput";
 
 export default function Films(){
     const [films,setFilms] = useState([]);
     const [isLoading,setIsLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState("");
+
     useEffect(() => {
         const getFilms = async() =>{
             try{
@@ -34,16 +37,22 @@ export default function Films(){
             </>
         )
     }
+
+    const filteredFilms = films.filter(film => film.type === "movie" && film.title.toLowerCase().includes(searchTerm.toLowerCase()));
+
     return (
-        <div className="films-container">
-            <h1>Movies</h1>
-            <div className="movies-container">
-                {
-                    films.filter(film => film.type === "movie") .map(film => {
-                            return <MoviesCard key={film.id} film={film} />
-                        })
-                }
+        <>
+            <SearchInput setSearchTerm={setSearchTerm} placeholder="Search for movies" />
+            <div className="films-container">
+                <h1>Movies</h1>
+                <div className="movies-container">
+                    {filteredFilms.length > 0 ? (
+                        filteredFilms.map((film) => <MoviesCard key={film.id} film={film} />)
+                    ) : (
+                        <p>No movies found.</p>
+                    )}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
