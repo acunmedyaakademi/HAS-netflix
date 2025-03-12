@@ -3,6 +3,8 @@ import App from "../App";
 import HomePage from "../assets/components/HomePage";
 import Sidebar from "../assets/components/Sidebar";
 import Films from "../assets/components/films";
+import Favorite from "../assets/components/favorite";
+import Series from "../assets/components/Series";
 
 export default function MainLayout() {
   const [page, setPage] = useState(window.location.pathname);
@@ -25,6 +27,8 @@ export default function MainLayout() {
         <App>
           {page === "/home" && <HomePage navigate={navigate} />}
           {page === "/filmler" && <Films navigate={navigate} />}
+          {page === "/diziler" && <Series navigate={navigate} />}
+          {page === "/favoriler" && <Favorite navigate={navigate} />}
         </App>
       </div>
     </div>
