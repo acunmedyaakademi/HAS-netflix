@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -48,7 +50,69 @@ body{
       rotate: 360deg;
     }
 }
-.movie-card{
+.films-container{
+    padding-inline: 16px;
+    h1{
+        font-family: Outfit;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: -0.31px;
+        color: white;
+        margin-bottom: 24px;
+    }
+}
+.movies-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+    row-gap: 16px;
+}
+.movie-card{
+    img{
+        height: 110px;
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-bottom: 8px;
+    }
+    h3{
+        font-family: Outfit;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: white;
+    }
+}
+.info{
+    display: flex;
+    color: white;
+    gap: 6px;
+    font-family: Outfit;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 100%;
+    margin-bottom: 4px;
+    i{
+        margin-right: 4px;
+    }
+    p{
+    text-transform: capitalize;
+
+    }
+}
+.image-container{
+    position: relative;
+}
+.bookmark-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 9px 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(16, 20, 30, 0.5006);
+    i{
+        color: white;
+    }
 }

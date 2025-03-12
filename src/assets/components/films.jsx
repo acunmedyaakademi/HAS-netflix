@@ -35,9 +35,9 @@ export default function Films(){
         )
     }
     return (
-        <div className="movies-container">
+        <div className="films-container">
             <h1>Movies</h1>
-            <div>
+            <div className="movies-container">
                 {
                     films.filter(film => film.type === "movie") .map(film => {
                             return <MoviesCard key={film.id} film={film} />
